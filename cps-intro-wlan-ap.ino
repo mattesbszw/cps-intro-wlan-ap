@@ -1,10 +1,10 @@
 #include <WiFi.h>
 #include <WebServer.h>
 
-#define LED_OUTPUT_1  26
+constexpr uint8_t LED_OUTPUT_1 = 26;
 
-const char* ssid = "...";
-const char* password = "...";
+constexpr char* ssid = "...";
+constexpr char* password = "...";
 
 WebServer server(80);
 

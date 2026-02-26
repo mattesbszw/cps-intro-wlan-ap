@@ -35,15 +35,15 @@ void setup() {
   digitalWrite(LED_OUTPUT_1, LOW);
 
   // create AP, print ip and mac address
+  Serial.println("Creating Access Point " + String(ssid));
   WiFi.mode(WIFI_AP);
-  Serial.print("Creating Access Point");
   WiFi.softAP(ssid, password);
   
   Serial.println("");
-  Serial.print("IP address: ");
-  Serial.println(WiFi.softAPIP());
   Serial.print("MAC address: ");
   Serial.println(WiFi.softAPmacAddress());
+  Serial.print("IP address: ");
+  Serial.println(WiFi.softAPIP());
 
   // web server routing: url, function name 
   server.on("/", handleRoot);

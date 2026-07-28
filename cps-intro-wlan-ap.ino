@@ -3,8 +3,8 @@
 
 constexpr uint8_t LED_OUTPUT_1 = 26;
 
-constexpr char* ssid = "...";
-constexpr char* password = "...";
+constexpr const char* ssid = "...";
+constexpr const char* password = "...";
 
 WebServer server(80);
 
